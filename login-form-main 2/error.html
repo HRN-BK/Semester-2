@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Error page">
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+   <!-- CSS -->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Error - Link Expired</title>
+</head>
+<body>
+   <div class="login error-page">
+      <img src="assets/img/login-bg.png" alt="Background image" class="login__bg">
+
+      <div class="login__form">
+         <div class="status-icon error">
+            <i class="fas fa-exclamation-circle"></i>
+         </div>
+         
+         <h1 class="login__title">Link Expired</h1>
+         <p class="login__description">This password reset link has expired or is invalid.</p>
+         
+         <div class="login__info">
+            <p>Possible reasons:</p>
+            <ul>
+               <li>The link has expired (valid for 1 hour)</li>
+               <li>The link has already been used</li>
+               <li>Invalid or malformed link</li>
+            </ul>
+         </div>
+
+         <div class="login__actions">
+            <a href="forgot-password.html" class="login__button">
+               <i class="fas fa-redo"></i> Request New Link
+            </a>
+            <p class="back-to-home">or <a href="index.html">Back to Login</a></p>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

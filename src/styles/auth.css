@@ -1,0 +1,7 @@
+@import url("/auth/styles.css");
+
+/* Override root selectors to prevent leaking to entire app */
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+}

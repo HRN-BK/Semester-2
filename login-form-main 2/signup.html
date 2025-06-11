@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Sign up to create a new account">
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+   <!-- CSS -->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Sign Up - Bedimcode</title>
+</head>
+<body>
+   <div class="login signup-form">
+      <img src="assets/img/login-bg.png" alt="Background image" class="login__bg">
+
+      <form action="#" class="login__form" id="signupForm">
+         <h1 class="login__title">Sign Up</h1>
+
+
+         <div class="login__inputs">
+            <div class="login__box">
+               <input type="text" placeholder="Full Name" required class="login__input" id="fullname" name="fullname">
+               <i class="fas fa-user"></i>
+            </div>
+
+
+            <div class="login__box">
+               <input type="email" placeholder="Email Address" required class="login__input" id="email" name="email">
+               <i class="fas fa-envelope"></i>
+            </div>
+
+            <div class="login__box">
+               <input type="password" placeholder="Create Password" required class="login__input" id="password" name="password" minlength="8">
+               <i class="fas fa-lock"></i>
+            </div>
+
+
+            <div class="login__box">
+               <input type="password" placeholder="Confirm Password" required class="login__input" id="confirmPassword" name="confirmPassword" minlength="8">
+               <i class="fas fa-lock"></i>
+            </div>
+         </div>
+
+
+         <div class="login__check">
+            <div class="login__check-box">
+               <input type="checkbox" class="login__check-input" id="terms-check" required>
+               <label for="terms-check" class="login__check-label">I agree to the <a href="#" class="login__terms">Terms & Conditions</a></label>
+            </div>
+         </div>
+
+
+         <button type="submit" class="login__button">
+            <i class="fas fa-user-plus"></i> Create Account
+         </button>
+
+         <div class="login__register">
+            Already have an account? <a href="index.html">Login here</a>
+         </div>
+      </form>
+   </div>
+
+
+   <script>
+      // Client-side form validation
+      document.getElementById('signupForm').addEventListener('submit', function(e) {
+         const password = document.getElementById('password').value;
+         const confirmPassword = document.getElementById('confirmPassword').value;
+         
+         if (password !== confirmPassword) {
+            e.preventDefault();
+            alert('Passwords do not match!');
+            return false;
+         }
+         
+         // If validation passes, the form will submit
+         return true;
+      });
+   </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Email sent confirmation">
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+   <!-- CSS -->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Email Sent - Bedimcode</title>
+</head>
+<body>
+   <div class="login email-sent">
+      <img src="assets/img/login-bg.png" alt="Background image" class="login__bg">
+
+      <div class="login__form">
+         <div class="status-icon">
+            <i class="fas fa-envelope-open-text"></i>
+         </div>
+         
+         <h1 class="login__title">Check Your Email</h1>
+         <p class="login__description">We've sent a password reset link to your email address.</p>
+         
+         <div class="login__info">
+            <p>Didn't receive the email?</p>
+            <ul>
+               <li>Check your spam or junk folder</li>
+               <li>Make sure the email address is correct</li>
+               <li>Try again in a few minutes</li>
+            </ul>
+         </div>
+
+         <div class="login__footer">
+            <p>Back to <a href="index.html">Login</a></p>
+            <p class="resend">Didn't get the email? <a href="#" id="resendLink">Resend</a></p>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      // Resend email functionality
+      document.getElementById('resendLink').addEventListener('click', function(e) {
+         e.preventDefault();
+         // In a real app, this would trigger a resend email API call
+         alert('A new password reset link has been sent to your email.');
+      });
+   </script>
+</body>
+</html>

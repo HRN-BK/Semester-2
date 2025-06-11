@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Verify your email address">
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+   <!-- CSS -->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Verify Your Email - Bedimcode</title>
+</head>
+<body>
+   <div class="login verify-email">
+      <img src="assets/img/login-bg.png" alt="Background image" class="login__bg">
+
+      <div class="login__form">
+         <div class="status-icon">
+            <i class="fas fa-envelope"></i>
+         </div>
+         
+         <h1 class="login__title">Verify Your Email</h1>
+         <p class="login__description">We've sent a verification link to <strong>user@example.com</strong></p>
+         
+         <div class="login__info">
+            <p>Please check your email and click the verification link to activate your account.</p>
+            <div class="tip">
+               <i class="fas fa-lightbulb"></i>
+               <span>Can't find the email? Check your spam or junk folder.</span>
+            </div>
+         </div>
+
+         <div class="login__actions">
+            <button id="resendBtn" class="login__button">
+               <i class="fas fa-paper-plane"></i> Resend Verification Email
+            </button>
+            <p class="email-change">Wrong email? <a href="signup.html">Update email address</a></p>
+         </div>
+
+         <div class="login__footer">
+            <p>Already verified? <a href="index.html">Sign in</a></p>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      // Resend verification email
+      document.getElementById('resendBtn').addEventListener('click', function() {
+         const btn = this;
+         const originalText = btn.innerHTML;
+         
+         // Disable button and show loading
+         btn.disabled = true;
+         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+         
+         // Simulate API call
+         setTimeout(() => {
+            // Show success message
+            alert('A new verification link has been sent to your email.');
+            
+            // Reset button after 2 seconds
+            setTimeout(() => {
+               btn.innerHTML = originalText;
+               btn.disabled = false;
+            }, 2000);
+         }, 1500);
+      });
+   </script>
+</body>
+</html>
